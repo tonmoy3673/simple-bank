@@ -614,6 +614,9 @@
 
 // ======================= Now Bank ===================//
 
+// =================== Balance section ================//
+
+
 
 
 // ================== deposit section ============//
@@ -626,6 +629,10 @@ document.getElementById('deposit-btn').addEventListener('click',function () {
     console.log(deposit);
     const totalDeposit=deposit+input;
     depositValue.innerText=(totalDeposit).toFixed(2);
+    const balanceText=document.getElementById('balance');
+    const balance=parseFloat(balanceText.innerText);
+    const newBalance=input+balance;
+    balanceText.innerText=newBalance.toFixed(2);
     depositInput.value= '';
 })
 
@@ -633,16 +640,21 @@ document.getElementById('deposit-btn').addEventListener('click',function () {
 // ================ withdraw section ===============//
 document.getElementById('withdraw-btn').addEventListener('click',function () {
     const withdrawValue=document.getElementById('withdraw-input');
-    const input=parseFloat(withdrawValue.value);
+    const withdrawInput=parseFloat(withdrawValue.value);
     const withdrawText=document.getElementById('withdraw');
     const withdraw=parseFloat(withdrawText.innerText);
-    const totalWithdraw=withdraw+input;
+    const totalWithdraw=withdraw+withdrawInput;
     withdrawText.innerText=totalWithdraw.toFixed(2);
 
     withdrawValue.value='';
 
     
 })
+
+
+
+
+
 
 
 
