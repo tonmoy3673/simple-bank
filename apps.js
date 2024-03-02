@@ -624,16 +624,21 @@
 document.getElementById('deposit-btn').addEventListener('click',function () {
     const depositInput=document.getElementById('deposit-input');
     const input=parseFloat(depositInput.value);
-    const depositValue=document.getElementById('deposit');
+    if (isNaN(input)) {
+        alert('Please Input a Valid Number');
+        depositInput.value= '';
+    } else {
+        const depositValue=document.getElementById('deposit');
     const deposit=parseFloat(depositValue.innerText);
     console.log(deposit);
     const totalDeposit=deposit+input;
     depositValue.innerText=(totalDeposit).toFixed(2);
-    const balanceText=document.getElementById('balance');
-    const balance=parseFloat(balanceText.innerText);
-    const newBalance=input+balance;
+    let balanceText=document.getElementById('balance');
+    let balance=parseFloat(balanceText.innerText);
+    let newBalance=input+balance;
     balanceText.innerText=newBalance.toFixed(2);
     depositInput.value= '';
+    }
 })
 
 
@@ -641,12 +646,19 @@ document.getElementById('deposit-btn').addEventListener('click',function () {
 document.getElementById('withdraw-btn').addEventListener('click',function () {
     const withdrawValue=document.getElementById('withdraw-input');
     const withdrawInput=parseFloat(withdrawValue.value);
+   if (isNaN(withdrawInput)) {
+    alert('Please Input a Valid Number');
+    withdrawValue.value= '';
+    
+   } else {
     const withdrawText=document.getElementById('withdraw');
     const withdraw=parseFloat(withdrawText.innerText);
     const totalWithdraw=withdraw+withdrawInput;
     withdrawText.innerText=totalWithdraw.toFixed(2);
+    
 
-    withdrawValue.value='';
+    withdrawValue.value= '';
+   }
 
     
 })
