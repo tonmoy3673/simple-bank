@@ -616,6 +616,33 @@
 
 
 
+// ================== deposit section ============//
+
+document.getElementById('deposit-btn').addEventListener('click',function () {
+    const depositInput=document.getElementById('deposit-input');
+    const input=parseFloat(depositInput.value);
+    const depositValue=document.getElementById('deposit');
+    const deposit=parseFloat(depositValue.innerText);
+    console.log(deposit);
+    const totalDeposit=deposit+input;
+    depositValue.innerText=(totalDeposit).toFixed(2);
+    depositInput.value= '';
+})
+
+
+// ================ withdraw section ===============//
+document.getElementById('withdraw-btn').addEventListener('click',function () {
+    const withdrawValue=document.getElementById('withdraw-input');
+    const input=parseFloat(withdrawValue.value);
+    const withdrawText=document.getElementById('withdraw');
+    const withdraw=parseFloat(withdrawText.innerText);
+    const totalWithdraw=withdraw+input;
+    withdrawText.innerText=totalWithdraw.toFixed(2);
+
+    withdrawValue.value='';
+
+    
+})
 
 
 
