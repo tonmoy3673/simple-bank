@@ -633,8 +633,8 @@ document.getElementById('deposit-btn').addEventListener('click',function () {
     console.log(deposit);
     const totalDeposit=deposit+input;
     depositValue.innerText=(totalDeposit).toFixed(2);
-    let balanceText=document.getElementById('balance');
-    let balance=parseFloat(balanceText.innerText);
+    const balanceText=document.getElementById('balance');
+    const balance=parseFloat(balanceText.innerText);
     let newBalance=input+balance;
     balanceText.innerText=newBalance.toFixed(2);
     depositInput.value= '';
@@ -655,7 +655,11 @@ document.getElementById('withdraw-btn').addEventListener('click',function () {
     const withdraw=parseFloat(withdrawText.innerText);
     const totalWithdraw=withdraw+withdrawInput;
     withdrawText.innerText=totalWithdraw.toFixed(2);
-    
+    const currentBalance=document.getElementById('balance');
+    const getBalance=parseFloat(currentBalance.innerText);
+    const totalBalance=getBalance-withdrawInput;
+    currentBalance.innerText=totalBalance;
+
 
     withdrawValue.value= '';
    }
