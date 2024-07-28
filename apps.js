@@ -621,55 +621,57 @@
 
 // ================== deposit section ============//
 
-document.getElementById('deposit-btn').addEventListener('click',function () {
-    const depositInput=document.getElementById('deposit-input');
-    const input=parseFloat(depositInput.value);
-    if (isNaN(input)) {
-        alert('Please Input a Valid Number');
-        depositInput.value= '';
-    } else {
-        const depositValue=document.getElementById('deposit');
-    const deposit=parseFloat(depositValue.innerText);
-    console.log(deposit);
-    const totalDeposit=deposit+input;
-    depositValue.innerText=(totalDeposit).toFixed(2);
-    const balanceText=document.getElementById('balance');
-    const balance=parseFloat(balanceText.innerText);
-    let newBalance=input+balance;
-    balanceText.innerText=newBalance.toFixed(2);
-    depositInput.value= '';
-    }
-})
+// document.getElementById('deposit-btn').addEventListener('click',function () {
+//     const depositInput=document.getElementById('deposit-input');
+//     const input=parseFloat(depositInput.value);
+//     if (isNaN(input)) {
+//         alert('Please Input a Valid Number');
+//         depositInput.value= '';
+//     } else {
+//         const depositValue=document.getElementById('deposit');
+//     const deposit=parseFloat(depositValue.innerText);
+//     console.log(deposit);
+//     const totalDeposit=deposit+input;
+//     depositValue.innerText=(totalDeposit).toFixed(2);
+//     const balanceText=document.getElementById('balance');
+//     const balance=parseFloat(balanceText.innerText);
+//     let newBalance=input+balance;
+//     balanceText.innerText=newBalance.toFixed(2);
+//     depositInput.value= '';
+//     }
+// })
 
 
-// ================ withdraw section ===============//
-document.getElementById('withdraw-btn').addEventListener('click',function () {
-    const withdrawValue=document.getElementById('withdraw-input');
-    const withdrawInput=parseFloat(withdrawValue.value);
-   if (isNaN(withdrawInput)) {
-    alert('Please Input a Valid Number');
-    withdrawValue.value= '';
+// // ================ withdraw section ===============//
+// document.getElementById('withdraw-btn').addEventListener('click',function () {
+//     const withdrawValue=document.getElementById('withdraw-input');
+//     const withdrawInput=parseFloat(withdrawValue.value);
+//    if (isNaN(withdrawInput)) {
+//     alert('Please Input a Valid Number');
+//     withdrawValue.value= '';
     
-   } else {
-    const withdrawText=document.getElementById('withdraw');
-    const withdraw=parseFloat(withdrawText.innerText);
-    const totalWithdraw=withdraw+withdrawInput;
-    withdrawText.innerText=totalWithdraw.toFixed(2);
-    const currentBalance=document.getElementById('balance');
-    const getBalance=parseFloat(currentBalance.innerText);
-    const totalBalance=getBalance-withdrawInput;
-    currentBalance.innerText=totalBalance;
+//    } else {
+//     const withdrawText=document.getElementById('withdraw');
+//     const withdraw=parseFloat(withdrawText.innerText);
+//     const totalWithdraw=withdraw+withdrawInput;
+//     withdrawText.innerText=totalWithdraw.toFixed(2);
+//     const currentBalance=document.getElementById('balance');
+//     const getBalance=parseFloat(currentBalance.innerText);
+//     const totalBalance=getBalance-withdrawInput;
+//     currentBalance.innerText=totalBalance;
 
 
-    withdrawValue.value= '';
-   }
+//     withdrawValue.value= '';
+//    }
 
     
-})
+// })
 
 
 
+// problem: Write a function which will show evalute student result and throw message:
 
+// ============ getAverage Function ==========//
 
 
 
