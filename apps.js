@@ -685,6 +685,14 @@ const getAverageScore=(scores)=>{
     
 }
 
+// ============ Grading Function =============//
+const getStudentGrade=()=>{
+    
+}
+
+
+
+
 const result=getAverageScore([45,98,66,75,78,56,42,9,100]);
 console.log(result);
 
