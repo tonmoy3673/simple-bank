@@ -675,11 +675,13 @@
 
 
 const getAverageScore=(scores)=>{
+    let sum=0;
     for(let i=0; i<scores.length; i++){
         const score=scores[i];
-         console.log(score);
+        sum=sum+score
     }
-
+    const average=(sum/scores.length).toFixed(2)
+    return average;
     
 }
 
