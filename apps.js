@@ -674,5 +674,15 @@
 // ============ getAverage Function ==========//
 
 
+const getAverageScore=(scores)=>{
+    for(let i=0; i<scores.length; i++){
+        const score=scores[i];
+         console.log(score);
+    }
 
+    
+}
+
+const result=getAverageScore([45,98,66,75,78,56,42,9,100]);
+console.log(result);
 
